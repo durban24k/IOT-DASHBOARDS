@@ -1,12 +1,10 @@
 #stockListener.py 
 """
-Visualizing a PubNub livestream
+     Visualizing a PubNub livestream
 """
-from matplotlib import animation, interactive
+from matplotlib import animation
 import matplotlib.pyplot as plt
-from numpy.core.fromnumeric import argmax
 import pandas as pd
-import random
 import seaborn as sns
 import sys
 
