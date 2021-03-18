@@ -17,3 +17,6 @@ Sensors - Humidity, light, chemical, gas and temperature
 e.g. freeboard.io -is geared to realtime pubsub applications - use cases - chat, IoT, multiplayer games.
 
 -IOT sensors simulation
+
+# PUBNUB SUBSCRIPTION
+stockListener.py - subscribe too the stream and visualize stock prices JSON - key value pairs (bid-price), order-quantity, symbol, timestamp and trade_type - bid price and symbol
