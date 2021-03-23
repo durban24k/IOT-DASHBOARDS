@@ -46,5 +46,5 @@ if __name__ == '__main__':
      pconfig.subscribe_key='sub-c-b0d14910-0601-11e4-b703-02ee2ddab7fe'
 
      pubnub=PubNub(pconfig)
-     pubnub.add_listener(SensorSubscriberCallBack())
+     pubnub.add_listener(SensorSubscriberCallBack(limit=int(sys.argv[1] if len(sys.argv)>1 else 1000)))
      pubnub.subscribe().channels('pubnub-wikipedia').execute()
