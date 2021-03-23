@@ -1,7 +1,6 @@
 """
      Wikipedia Datastream
 """
-
 import sys
 from pubnub.callbacks import SubscribeCallback
 from pubnub.enums import PNStatusCategory
