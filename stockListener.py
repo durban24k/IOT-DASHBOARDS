@@ -47,7 +47,7 @@ class SensorSubscriberCallBack(SubscribeCallback):
 def update(frame_number):
      """Configures Bar plot contents for each animation"""
      plt.cla()
-     axes=sns.barplot(data=companies_df,x='company',y='price',palette='cool')
+     axes=sns.barplot(x='company',y='price', data=companies_df, palette='cool')
      axes.set(xlabel='Company',ylabel='Price')
      plt.tight_layout()
 
@@ -56,13 +56,12 @@ if __name__ == '__main__':
      figure=plt.figure('Stock Prices')
 
      #configure and start the animation
-
      stock_animation=animation.FuncAnimation(figure,update,repeat=False,interval=33)
      plt.show(block=False) # display the window
 
      #set up thepubnub market order sensor stream key
      config=PNConfiguration()
-     config.subscribe_key="sub-c-b134f796-87ee-11eb-88a7-4a59fc122af9"
+     config.subscribe_key='sub-c-4377ab04-f100-11e3-bffd-02ee2ddab7fe'
 
      #create PubNub client and register a subscriberCallback
      pubnub=PubNub(config)
