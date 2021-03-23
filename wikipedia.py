@@ -1,12 +1,8 @@
 """
-     Visualizing a PubNub livestream
+     Wikipedia Datastream
 """
-from matplotlib import animation
-import matplotlib.pyplot as plt
-import pandas as pd
-import seaborn as sns
-import sys
 
+import sys
 from pubnub.callbacks import SubscribeCallback
 from pubnub.enums import PNStatusCategory
 from pubnub.pnconfiguration import PNConfiguration
