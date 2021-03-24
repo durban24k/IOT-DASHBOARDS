@@ -1,5 +1,5 @@
 """
-     Wikipedia Datastream
+     Wikipedia Datastream DURBAN24K
 """
 import sys
 from pubnub.callbacks import SubscribeCallback
@@ -50,3 +50,7 @@ if __name__ == '__main__':
      pubnub=PubNub(pconfig)
      pubnub.add_listener(SensorSubscriberCallBack(limit=int(sys.argv[1] if len(sys.argv)>1 else 1000)))
      pubnub.subscribe().channels('pubnub-wikipedia').execute()
+
+"""
+     Wikipedia Datastream DURBAN24K
+"""
