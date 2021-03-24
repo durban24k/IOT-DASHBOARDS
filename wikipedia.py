@@ -2,7 +2,6 @@
      Wikipedia Datastream
 """
 import sys
-import fs
 from pubnub.callbacks import SubscribeCallback
 from pubnub.enums import PNStatusCategory
 from pubnub.pnconfiguration import PNConfiguration
@@ -33,6 +32,11 @@ class SensorSubscriberCallBack(SubscribeCallback):
           print(user)
           print(link)
           print('***************************************************************************')
+
+          # Log the data into an log file
+          f=open('log.txt','a')
+          f.write(event+'\n'+item+'\n'+user+'\n'+link+'\n***************************************************************************\n')
+          f.close()
 
           if self.order_count == self.max_orders:
                pubnub.unsubscribe_all()
