@@ -23,20 +23,14 @@ class SensorSubscriberCallBack(SubscribeCallback):
                print('Service Unsubscribed')
 
      def message(self,pubnub,message):
-          event=message.message['event']
-          item=message.message['item']
-          user=message.message['user']
-          link=message.message['link']
+          event=message.message["event"]
+          item=message.message["item"]
+          user=message.message["user"]
+          link=message.message["link"]
           print(event)
           print(item)
           print(user)
           print(link)
-          print('***************************************************************************')
-
-          # Log the data into an log file
-          f=open('log.txt','a')
-          f.write(event+'\n'+item+'\n'+user+'\n'+link+'\n***************************************************************************\n')
-          f.close()
 
           if self.order_count == self.max_orders:
                pubnub.unsubscribe_all()
